@@ -16,7 +16,7 @@ A minimal native macOS app for video wallpaper, screen saver, and the signed-in 
 
 ## Availability
 
-Source is available now. A Developer ID signed and notarized public download is **pending**; no release is claimed until Apple’s signing and notarization checks complete. No movie clips are included in this repository.
+A [Developer ID signed preview](https://github.com/iamthehimansh/Still/releases/tag/v1.1.0-beta.1) is available. **Apple notarization is pending**, so macOS may block opening the downloaded app. This is a prerelease, not a notarized stable release. No movie clips are included.
 
 Targets macOS 26+. Tested on Apple Silicon. Still uses private macOS wallpaper interfaces and may need updates after macOS changes. It is not an App Store app. The lock-screen feature applies to a signed-in session, not FileVault or the login screen before signing in.
 

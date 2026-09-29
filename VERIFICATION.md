@@ -18,8 +18,10 @@ The actual video renderer was previously tested with real media across two loops
 - Native app builds; strict nested signature verification passes for the local ad-hoc build.
 - Existing sound/animation preferences survive the new settings fields.
 - Selecting Low Power Mode pause on a Mac with Low Power Mode active changes the live renderer to paused.
-- Menu bar actions and selected image rendering are checked separately during release preparation.
+- Live image selection reaches the native renderer; switching back restores video playback.
+- Offscreen real-media tests passed for image decoding/sizing, deduplication, pause, frozen audio/video clock, restore/resume, and missing-image fallback. Run `./scripts/test-power-image.sh /path/video.mov /path/image.png`.
+- Menu actions are implemented and their settings behavior is covered; audible output and remote compositor appearance still require visual/listening checks.
 
 ## Distribution status
 
-Development build only until a Developer ID signature, accepted notarization ticket, stapling, and Gatekeeper check all pass. No public signed release has been certified by these source-level checks.
+The preview has a valid Developer ID Application signature, hardened runtime, and a secure timestamp. Strict nested signature verification passed. It contains no starter movie. Notarization is pending on Apple account credentials; no accepted ticket, stapling, or Gatekeeper acceptance is claimed. The downloadable preview is labelled as a prerelease.
