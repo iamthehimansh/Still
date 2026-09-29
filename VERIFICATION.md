@@ -15,7 +15,8 @@ The actual video renderer was previously tested with real media across two loops
 
 ## Live checks for this update
 
-- Native app builds; strict nested signature verification passes for the local ad-hoc build.
+- Native app builds; strict nested signature verification passes for both the development build and the Developer ID signed preview.
+- The signed app was launched locally, and macOS successfully launched its signed native wallpaper extension after refreshing the wallpaper host. The live extension restored the existing selected video and screen geometry.
 - Existing sound/animation preferences survive the new settings fields.
 - Selecting Low Power Mode pause on a Mac with Low Power Mode active changes the live renderer to paused.
 - Live image selection reaches the native renderer; switching back restores video playback.
