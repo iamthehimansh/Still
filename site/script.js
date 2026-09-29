@@ -20,4 +20,8 @@ function setPaused(paused) {
 }
 motion.addEventListener('click', () => setPaused(!desktop.classList.contains('paused')));
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-if (reducedMotion.matches) { setPaused(true); motion.disabled = true; motion.textContent = 'Reduced motion enabled'; }
+// Respect reduced motion at load, while allowing explicit playback on request.
+setPaused(reducedMotion.matches);
+reducedMotion.addEventListener('change', (event) => {
+  if (event.matches) setPaused(true);
+});
