@@ -1,0 +1,19 @@
+.DS_Store
+.build/
+Build/
+work/
+Still.app/
+*.app/
+*.zip
+*.dmg
+*.pkg
+*.mov
+*.mp4
+*.m4v
+*.p12
+*.p8
+*.key
+*.cer
+*.certSigningRequest
+.env*
+Recovered Wallpaper/
